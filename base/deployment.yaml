@@ -13,7 +13,11 @@ spec:
         app: mynodeapp
     spec:
       containers:
-      - name: mynodeapp
-        image: ghcr.io/gotohola/mynodeapp:latest
-        ports:
-        - containerPort: 3000
+        - name: mynodeapp
+          # Usa la imagen con la "nueva" etiqueta si quieres
+          image: ghcr.io/gotohola/mynodeapp:redis
+          env:
+            - name: REDIS_HOST
+              value: "redis-service"
+          ports:
+            - containerPort: 3000

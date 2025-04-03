@@ -1,3 +1,5 @@
 resources:
-  - deployment.yaml
-  - service.yaml
+  - deployment.yaml        # tu Node app
+  - service.yaml           # tu Node service
+  - redis-deployment.yaml  # redis
+  - redis-service.yaml     # redis
